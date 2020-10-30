@@ -13,7 +13,7 @@ const [itemData,setItemData]=useState([]);
        url: "https://jsonplaceholder.typicode.com/posts",
       
     }).then((result) => {
-    	console.log(result.data);
+    	// console.log(result.data);
     
        setItemData(result.data);
     });

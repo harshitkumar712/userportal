@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
-import { Route, BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
-	const [menu, setMenu] = useState(true);
+	const [menu, setMenu] = useState(false);
 	const showMenu = () => {
 		setMenu(!menu);
-		console.log("hey");
 	};
 
 	return (

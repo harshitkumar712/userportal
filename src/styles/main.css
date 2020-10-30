@@ -1,36 +1,35 @@
-.main-container{
-	margin-top:20vh;
-	display: flex;
+.main-container {
+    margin-top: 20vh;
+    display: flex;
     width: 100%;
     align-items: stretch;
 }
 
-.container-left{
-	min-width:250px;
-    max-width:250px;
-    min-height:100vh;
+.container-left {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
 }
-.container-middle{
-	width:100%;
+.container-middle {
+    width: 100%;
 }
-.container-right{
-min-width: 250px;	
+.container-right {
+    min-width: 250px;
 }
 
 @media (max-width: 768px) {
     .container-left {
-        position:fixed;
-        left:-100%;
-
+        position: fixed;
+        left: -100%;
+       
     }
 
-.container-left.active{
-	top:0;
-		left:0;
-		transition:1s;
-		z-index:100;
-
-	}
+    .container-left.active {
+        top: 0;
+        left: 0;
+        transition: 1s;
+        z-index: 100;
+    }
 
     .container-right {
         display: none;

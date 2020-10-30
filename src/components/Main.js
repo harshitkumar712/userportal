@@ -3,7 +3,6 @@ import "../styles/main.css";
 import CategoryMenu from "./CategoryMenu";
 import MainArticle from "./MainArticle";
 const Main = ({menu,showMenu}) => {
-	console.log(menu);
 	return (
 		<div className="main-container container-fluid">
 			<div className={menu?"container-left active":"container-left"} style={{ background: "#eee" }}>
