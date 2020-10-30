@@ -1,0 +1,38 @@
+.header-container{
+	z-index:10;
+	background:white;	
+	
+	width:100%;
+	top:0;
+	position:fixed;
+}
+
+.header-content{
+	height:10vh;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	
+}
+.header-logo,.header-search{
+	margin:0 1rem;
+}
+.category-header-container{
+	
+
+}
+
+.bars{
+	display:none;
+    
+}
+@media screen and (max-width: 768px){
+	.bars{
+		display:block;
+	margin-left:2rem;
+	font-size:1.5rem;
+	color:black;
+	cursor:pointer;
+    
+}
+}

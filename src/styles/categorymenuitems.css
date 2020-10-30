@@ -1,0 +1,16 @@
+/*.drop-inner{
+	font-size:0.9rem;
+}*/
+.drop-outer a{
+	text-decoration:none !important;
+ font-size:.9rem;
+ color:black;
+
+}
+
+.drop-text{
+	/*border-left:3px solid white;*/
+	padding:2.5px 0;
+	margin:2.5px 0;
+	
+}

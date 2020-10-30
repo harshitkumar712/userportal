@@ -1,0 +1,20 @@
+.button-container{
+	margin:1rem 0;
+}
+
+.button-inner{
+	display:flex;
+	justify-content:space-between;
+
+}
+
+.button-inner button{
+	padding:.5rem 1rem;
+	border:none;
+	color:white;
+	background:#A81838;
+}
+
+.button-inner button:hover{
+opacity:.9;
+}

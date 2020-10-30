@@ -1,0 +1,23 @@
+.category-header{
+	background:#A81838;
+	width:100%;
+	height:8vh;
+}
+.category-header-contents{
+	height:100%;
+	display:flex;
+	justify-content:space-around;
+    align-items:center;
+}
+.category-name{
+	color:white;
+	height:100%;
+	cursor:pointer;
+	
+	padding:1rem 2rem;
+
+}
+.category-name:hover{
+  background:rgba(0,0,0,.1);
+	
+}
