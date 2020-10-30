@@ -58,6 +58,7 @@ font-size:1rem;
 @media (max-width: 768px) {
    .menu{
 	overflow:auto;
+	height:100vh;
 }
    .cross{
    	display:block;
