@@ -73,6 +73,7 @@ const CatergoryHeader=()=>{
    {category}
   </div>
 </div>
+
 <div className="category-header-fixed">Interview</div>
 <div className="category-header-fixed">Training</div>
 			<div className="category-header-search">
