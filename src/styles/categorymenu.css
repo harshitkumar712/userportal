@@ -38,7 +38,10 @@ background:rgba(0,0,0,.1);
 	font-size:1rem;
 	
 cursor:pointer;
-border-bottom: 1.2px solid rgba(0,0,0,.25);
+/*border-bottom: 1px solid rgba(0,0,0,.25);*/
+}
+.menu-text .menu-div:hover{
+	background:#ddd;
 }
 .angle{
 transition:.1s;	
@@ -55,6 +58,7 @@ font-size:1rem;
 .cross{
 	display:none;
 }
+
 @media (max-width: 768px) {
    .menu{
 	overflow:auto;

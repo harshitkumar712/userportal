@@ -9,7 +9,8 @@ const Header=({showMenu})=>{
 		 <div className="header-container">
 		 	<div className="header-content">
 		 		<div className="bars" onClick={showMenu}>
-					<i className="fas fa-bars"></i>
+		 			<i className="fa fa-angle-double-right"></i>Menu
+					{/* <i className="fas fa-bars"></i> */}
 				</div>
 		 	<div className="header-logo">
 		 		<h1>LOGO</h1>
