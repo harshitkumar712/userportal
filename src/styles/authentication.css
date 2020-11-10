@@ -1,0 +1,24 @@
+.authentication-screen {
+    
+    width:100%;
+    margin: 0px auto;
+}
+
+.auth-form {
+    padding: 5% 0% 0% 0%;
+    border-top: solid 1px #dee2e6;
+    margin-top: 2%;
+}
+
+.nav-pills .nav-link {
+    width: 50%;
+    text-align: center;
+    color:#A81838;
+   
+}
+
+
+.nav-pills .nav-link.active {
+    color: #fff;
+    background-color: #A81838 !important;
+}

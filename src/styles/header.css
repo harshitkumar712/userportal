@@ -14,6 +14,18 @@
 	align-items:center;
 	
 }
+.header-button-signin button{
+	padding:.5rem 1rem;
+	border:none;
+	color:white;
+	background:#A81838;
+	border-radius:5px;
+	margin:0 1rem;
+}
+.header-button-signin button:hover{
+	
+
+}
 .header-logo,.header-search{
 	margin:0 1rem;
 }
