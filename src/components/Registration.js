@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, Form, Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 
 import '../styles/registration.css';
 
