@@ -38,7 +38,7 @@ const CategoryMenu = ({showMenu,handleArticle}) => {
 					></i>
 				</div>
 				<div className="drop " >
-					<CategoryMenuItems barid={item.id} handleArticle={handleArticle}/>
+					<CategoryMenuItems barid={item.id} handleArticle={handleArticle} showMenu={showMenu}/>
 				</div>
 			</li>
 		);

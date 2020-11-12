@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/categorymenuitems.css";
 
-const CategoryMenuItems = ({ barid ,handleArticle}) => {
+const CategoryMenuItems = ({ barid ,handleArticle,showMenu}) => {
 	const [itemData, setItemData] = useState([]);
 	useEffect(() => {
 		axios({
@@ -16,9 +16,10 @@ const CategoryMenuItems = ({ barid ,handleArticle}) => {
 		});
 	}, []);
 
-// const handleArticle=(id)=>{
-// 		console.log(id);
-// 	}
+ const handleMenuArticle=(id)=>{
+		handleArticle(id)
+		showMenu();
+ 	}
 
 	const dData = itemData
 		.filter((item) => barid === item.userId)
@@ -27,7 +28,7 @@ const CategoryMenuItems = ({ barid ,handleArticle}) => {
 				<Link to="#" key={index}>
 					<div
 						className="drop-text"
-						onClick={()=>handleArticle(item.id)}
+						onClick={()=>handleMenuArticle(item.id)}
 					>
 						<div className="drop-inner">
 							<i className="fas fa-caret-right"></i>&nbsp;

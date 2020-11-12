@@ -44,6 +44,7 @@ const MainArticle = ({ currentId }) => {
 		<div>
 			<ArticleButton setArticleId={setArticleId}/>
 			{articleData}
+			<ArticleButton setArticleId={setArticleId}/>
 		</div>
 	);
 };
