@@ -13,7 +13,7 @@ const MenuData = [
 	// { id: 8, category: "SUBCRIPTION" },
 ];
 
-const CategoryMenu = ({showMenu}) => {
+const CategoryMenu = ({showMenu,handleArticle}) => {
 
 	const showDropdown = (e) => {
 
@@ -23,6 +23,8 @@ const CategoryMenu = ({showMenu}) => {
 		rotate.classList.toggle("down");
 		
 	};
+
+	
 	const mData = MenuData.map((item, index) => {
 		return (
 			<li className="menu-text" key={index}>
@@ -36,7 +38,7 @@ const CategoryMenu = ({showMenu}) => {
 					></i>
 				</div>
 				<div className="drop " >
-					<CategoryMenuItems barid={item.id} />
+					<CategoryMenuItems barid={item.id} handleArticle={handleArticle}/>
 				</div>
 			</li>
 		);
