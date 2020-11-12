@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import Footer from './components/Footer'
 import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
 			<Router>
 				<Header showMenu={showMenu} />
 				<Main menu={menu} showMenu={showMenu} />
+				
 			</Router>
+			<Footer/>
 		</div>
 	);
 }
