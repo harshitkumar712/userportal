@@ -1,20 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import "../styles/categorymenuitems.css";
 
-const CategoryMenuItems = ({ barid ,handleArticle,showMenu}) => {
-	const [itemData, setItemData] = useState([]);
-	useEffect(() => {
-		axios({
-			method: "get",
-			url: "https://jsonplaceholder.typicode.com/posts",
-		}).then((result) => {
-			// console.log(result.data);
-
-			setItemData(result.data);
-		});
-	}, []);
+const CategoryMenuItems = ({ barid ,handleArticle,showMenu,itemData}) => {
+	
 
  const handleMenuArticle=(id)=>{
 		handleArticle(id)
@@ -33,6 +22,7 @@ const CategoryMenuItems = ({ barid ,handleArticle,showMenu}) => {
 						<div className="drop-inner">
 							<i className="fas fa-caret-right"></i>&nbsp;
 							{item.title}
+							
 						</div>
 					</div>
 				</Link>

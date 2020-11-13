@@ -14,7 +14,7 @@
 	display:flex;
     width:80%;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
 }
 .footer-about{
 	width:40%;

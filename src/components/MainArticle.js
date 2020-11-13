@@ -8,7 +8,6 @@ const MainArticle = ({ currentId }) => {
 	const [loading, setLoading] = useState(true);
 	useEffect(()=>{
 		setArticleId(currentId);
-		console.log('haha')
 	},[currentId]);
 	useEffect(() => {
 
@@ -17,9 +16,9 @@ const MainArticle = ({ currentId }) => {
 			method: "get",
 			url: `https://jsonplaceholder.typicode.com/posts/${articleId}`,
 		}).then((result) => {
-			console.log("run");
 			setLoading(false);
 			setArticle(result.data.body);
+			localStorage.setItem('current', articleId);
 		});
 	},[articleId]);
 
@@ -39,7 +38,6 @@ const MainArticle = ({ currentId }) => {
 			</h2>
 		</div>
 	);
-	console.log(articleId);
 	return (
 		<div>
 			<ArticleButton setArticleId={setArticleId}/>

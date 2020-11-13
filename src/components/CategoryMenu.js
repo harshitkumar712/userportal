@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import "../styles/categorymenu.css";
 import CategoryMenuItems from "./CategoryMenuItems";
+import axios from "axios";
 
 const MenuData = [
 	{ id: 1, category: "Introduction" },
@@ -8,12 +9,26 @@ const MenuData = [
 	{ id: 3, category: "Inheritence" },
 	{ id: 4, category: "Abstraction" },
 	{ id: 5, category: "OOPs" },
-	// { id: 6, category: "Encapsulation" },
-	// { id: 7, category: "Data Hiding" },
-	// { id: 8, category: "SUBCRIPTION" },
+	 { id: 6, category: "Encapsulation" },
+	 { id: 7, category: "Data Hiding" },
+	 { id: 8, category: "SUBCRIPTION" },
 ];
 
 const CategoryMenu = ({showMenu,handleArticle}) => {
+
+
+	const [itemData, setItemData] = useState([]);
+	
+	useEffect(() => {
+		
+		axios({
+			method: "get",
+			url: "https://jsonplaceholder.typicode.com/posts",
+		}).then((result) => {
+			// console.log(result.data);
+			setItemData(result.data);
+		});
+	}, []);
 
 	const showDropdown = (e) => {
 
@@ -38,7 +53,7 @@ const CategoryMenu = ({showMenu,handleArticle}) => {
 					></i>
 				</div>
 				<div className="drop " >
-					<CategoryMenuItems barid={item.id} handleArticle={handleArticle} showMenu={showMenu}/>
+					<CategoryMenuItems barid={item.id} handleArticle={handleArticle} showMenu={showMenu} itemData={itemData}/>
 				</div>
 			</li>
 		);
