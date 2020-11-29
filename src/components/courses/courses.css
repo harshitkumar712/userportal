@@ -1,0 +1,55 @@
+.course-container{
+	display:flex;
+	flex-direction:column;
+	background:#eee;
+	margin:1rem;
+	padding:1rem;
+	
+}
+
+.course-list{
+display:flex;
+margin:.5rem;
+
+}
+
+.course{
+  
+	
+	margin:1rem;
+}
+
+.course p{
+	text-align:center;	
+
+}
+.course img{
+	width: 100%;
+  max-width:4rem;
+  height: auto;
+}
+
+.course-footer{
+	align-self:flex-end;
+}
+
+.course-grid{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+
+}
+
+.course-header{
+	font-size:1.2rem;
+}
+
+
+@media (max-width: 768px) {
+ .course{
+  
+	
+	margin:0rem;
+}
+
+}

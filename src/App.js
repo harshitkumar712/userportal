@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from './components/Footer'
+import CourseList from './components/courses/CourseList'
 import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 			<Router>
 				<Header showMenu={showMenu} />
 				<Main menu={menu} showMenu={showMenu} />
-				
+				<CourseList/>
 			</Router>
 			<Footer/>
 		</div>
