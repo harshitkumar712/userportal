@@ -10,6 +10,8 @@
 .course-list{
 display:flex;
 margin:.5rem;
+flex-wrap:wrap;
+justify-content:center;
 
 }
 
@@ -46,10 +48,10 @@ margin:.5rem;
 
 
 @media (max-width: 768px) {
- .course{
+/* .course{
   
 	
 	margin:0rem;
-}
+}*/
 
 }
