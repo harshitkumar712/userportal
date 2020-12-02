@@ -1,0 +1,23 @@
+.article-container{
+	padding: 1rem;
+
+}
+
+.article-container img{
+	 max-width: 100%;
+  height: auto;
+}
+
+
+
+/*.mainarticle-container{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+height:100%;
+}
+*/
+
+.mainarticle-inner{
+	
+}

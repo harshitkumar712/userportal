@@ -5,19 +5,20 @@ import "../styles/categorymenuitems.css";
 const CategoryMenuItems = ({ barid ,handleArticle,showMenu,itemData}) => {
 	
 
- const handleMenuArticle=(id)=>{
+ const handleMenuArticle=(id,item)=>{
 		handleArticle(id)
+		localStorage.setItem("currentArticle", JSON.stringify(item)); 
 		showMenu();
  	}
 
-	const dData = itemData
-		.filter((item) => barid === item.userId)
+	const dData = itemData.ArticlesData
+		// .filter((item) => barid === item.userId)
 		.map((item, index) => {
 			return (
 				<Link to="#" key={index}>
 					<div
 						className="drop-text"
-						onClick={()=>handleMenuArticle(item.id)}
+						onClick={()=>handleMenuArticle(item.articleId,item)}
 					>
 						<div className="drop-inner">
 							<i className="fas fa-caret-right"></i>&nbsp;
