@@ -14,7 +14,7 @@ import axios from "axios";
 // 	 { id: 8, category: "SUBCRIPTION" },
 // ];
 
-const CategoryMenu = ({showMenu,handleArticle}) => {
+const CategoryMenu = ({showMenu,handleArticle,setArticleData}) => {
 
 
 	// const [itemData, setItemData] = useState([]);
@@ -36,13 +36,24 @@ const CategoryMenu = ({showMenu,handleArticle}) => {
 			 console.log(result.data.Data);
 			setMenuData(result.data.Data);
 			const {ArticlesData}=result.data.Data[0];
-			console.log(ArticlesData);
+			
+
 			const firstArticle=ArticlesData[0];
-			console.log(firstArticle)
+			
 			if (!localStorage.getItem("currentArticle")){
 			localStorage.setItem("currentArticle", JSON.stringify(firstArticle)); 
 			console.log(  JSON.parse(localStorage.getItem("currentArticle"))) 
 		}
+
+           let allArticle=[];
+		    for(let i=0;i<result.data.Data.length;i++){
+		    	
+		    	allArticle=allArticle.concat(result.data.Data[i].ArticlesData)
+		    	
+
+		    }
+		    console.log(allArticle)
+		   setArticleData(allArticle)
 
 		});
 	}, []);
@@ -70,7 +81,7 @@ const CategoryMenu = ({showMenu,handleArticle}) => {
 					></i>
 				</div>
 				<div className="drop " >
-					<CategoryMenuItems barid={item.SubCategoryId} handleArticle={handleArticle} showMenu={showMenu} itemData={item}/>
+					<CategoryMenuItems barid={item.SubCategoryId}  handleArticle={handleArticle} showMenu={showMenu} itemData={item}/>
 				</div>
 			</li>
 		);

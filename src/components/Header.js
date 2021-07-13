@@ -21,7 +21,7 @@ const handleSignIn=()=>{
 						<i className="fas fa-bars"></i>
 					</div>
 					<div className="header-logo">
-						<h1>LOGO</h1>
+						<h1>USER</h1>
 					</div>
 					<div className="header-button-signin">
 						<button onClick={handleSignIn}>Sign in</button>

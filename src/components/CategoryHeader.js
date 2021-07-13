@@ -49,7 +49,7 @@ const CatergoryHeader=()=>{
 	const category = categoryData.map((item, index) => {
 		return (
 			<React.Fragment key={index}>
-				<div className="category-name">
+				<div onClick={()=>console.log(item.Name)} className="category-name">
 					{item.Name}
 				</div>
 			</React.Fragment>

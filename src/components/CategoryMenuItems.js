@@ -1,9 +1,12 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import "../styles/categorymenuitems.css";
 
 const CategoryMenuItems = ({ barid ,handleArticle,showMenu,itemData}) => {
 	
+ 
+
+
 
  const handleMenuArticle=(id,item)=>{
 		handleArticle(id)
@@ -18,7 +21,7 @@ const CategoryMenuItems = ({ barid ,handleArticle,showMenu,itemData}) => {
 				<Link to="#" key={index}>
 					<div
 						className="drop-text"
-						onClick={()=>handleMenuArticle(item.articleId,item)}
+						onClick={()=>handleMenuArticle(index,item)}
 					>
 						<div className="drop-inner">
 							<i className="fas fa-caret-right"></i>&nbsp;
